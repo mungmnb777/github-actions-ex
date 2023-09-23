@@ -8,7 +8,7 @@ on:
 env:
   NCP_ACCESS_KEY: ${{ secrets.NCP_ACCESS_KEY }}
   NCP_SECRET_KEY: ${{ secrets.NCP_SECRET_KEY }}
-  NCP_DO_SOURCEDEPLOY_PATH: ${{ NCP_DO_SOURCEDEPLOY_PATH }}
+  NCP_DO_SOURCEDEPLOY_PATH: $NCP_DO_SOURCEDEPLOY_PATH
 
 permissions:
   contents: read
