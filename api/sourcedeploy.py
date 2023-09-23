@@ -43,10 +43,9 @@ http_header = {
 # api 호출
 try:
     response = requests.post(api_url + api_path, headers=http_header)
-    response.raise_for_status()
+    response.raise_for_status()  # HTTPError 발생 가능
     print (response.text)
-    print (api_url + api_path)
 except requests.exceptions.RequestException as e:
     print("error occurred: ", e)
-
+    sys.exit(1)
 
