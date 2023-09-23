@@ -30,14 +30,18 @@ jobs:
       with:
         python-version: '3.10' 
 
-    # (3) Request 라이브러리 설치
+    # (3) pip 패키지 업데이트
+    - name: Update pip
+      run: pip install --upgrade pip
+      shell: bash
+
+    # (4) Request 라이브러리 설치
     - name: Install 'request' module by pip
-      run: |
-        pip install --upgrade pip \
+      run: pip install --upgrade pip
           pip install request
       shell: bash
 
-    # (4) 배포 파일 실행
+    # (5) 배포 파일 실행
     - name: Deploy to Server
       run: python sourcedeploy.py
       shell: bash
