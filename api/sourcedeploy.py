@@ -44,3 +44,4 @@ http_header = {
 response = requests.post(api_url + api_path, headers=http_header)
 
 print (response.text)
+print (api_url + api_path)
