@@ -41,7 +41,12 @@ http_header = {
 }
 
 # api 호출
-response = requests.post(api_url + api_path, headers=http_header)
+try:
+    response = requests.post(api_url + api_path, headers=http_header)
+    response.raise_for_status()
+    print (response.text)
+    print (api_url + api_path)
+except requests.exceptions.RequestException as e:
+    print("error occurred: ", e)
 
-print (response.text)
-print (api_url + api_path)
+
