@@ -42,5 +42,6 @@ jobs:
 
     # (5) 배포 파일 실행
     - name: Deploy to Server
+      working-directory: api
       run: python sourcedeploy.py
       shell: bash
