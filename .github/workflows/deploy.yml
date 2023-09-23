@@ -37,8 +37,7 @@ jobs:
 
     # (4) Request 라이브러리 설치
     - name: Install 'request' module by pip
-      run: pip install --upgrade pip
-          pip install request
+      run: pip install request
       shell: bash
 
     # (5) 배포 파일 실행
